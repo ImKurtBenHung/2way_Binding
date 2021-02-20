@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="node_modules/vue/dist/vue.js"></script> -->
+    <script src="2wayBind.js""></script>
+</head>
+<body>
+    <div id="app">
+        {{title}} 
+        <h1>{{title}}</h1>
+        <input type="text" v-model="user.name" >
+        <div>
+            输入的用户名为：{{user.name}} 
+        </div>
+        <div>
+            邮箱为：{{user.email}} 
+        </div>
+        <ul>
+            <li>{{title}}</li>
+        </ul>
+        <div>{{message}}</div>
+    </div>
+</body>
+<script>
+    var vm = new Vue({
+        el:'#app',
+        data:{
+            title: "简易双向绑定",
+            user: {
+                name: "kurtben",
+                email: "kurtbenhung@163.com"
+            },
+            message: "<h1>你好GitHub</h1>"
+        }
+    })
+</script>
+</html>
